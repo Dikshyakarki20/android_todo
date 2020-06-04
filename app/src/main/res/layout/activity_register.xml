@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".tasks.RegisterActivity"
+    android:orientation="vertical"
+    android:gravity="center_horizontal">
+    <EditText
+        android:id="@+id/rUsername"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="30dp"
+        android:autofillHints=""
+        android:hint="@string/username"
+        android:drawableStart="@drawable/iconusername"
+        android:inputType="text" />
+
+    <EditText
+        android:id="@+id/rEmailAddress"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="30dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="@string/emailaddress"
+        android:inputType="textEmailAddress" />
+
+    <EditText
+        android:id="@+id/rAddress"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="30dp"
+        android:autofillHints=""
+        android:hint="@string/address"
+        android:inputType="text"
+    <EditText
+        android:id="@+id/rPassword"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="30dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="@string/password"
+        android:drawableStart="@drawable/iconpassword"
+        android:inputType="textPassword" />
+    <EditText
+        android:id="@+id/rrPassword"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="30dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="@string/retypepassword"
+        android:drawableStart="@drawable/iconpassword"
+        android:inputType="textPassword" />
+
+    <Button
+        android:id="@+id/rRegister"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="30dp"
+        android:text="@string/register" />
+    <Button
+        android:id="@+id/rCancel"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="30dp"
+        android:text="@string/cancel" />
+
+</LinearLayout>

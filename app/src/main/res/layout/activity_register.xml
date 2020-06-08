@@ -6,67 +6,105 @@
     android:layout_height="match_parent"
     tools:context=".tasks.RegisterActivity"
     android:orientation="vertical"
-    android:gravity="center_horizontal">
+    android:gravity="center_horizontal"
+    android:background="@drawable/background">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="120dp"
+        android:src="@drawable/logo" />
+
     <EditText
         android:id="@+id/rUsername"
         android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:layout_marginTop="30dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="15dp"
         android:autofillHints=""
-        android:hint="@string/username"
+        android:text=""
         android:drawableStart="@drawable/iconusername"
-        android:inputType="text" />
+        android:fontFamily="serif-monospace"
+        android:hint="@string/username"
+        android:inputType="text"
+        android:textColorHint="#070707"
+        android:textSize="24sp" />
 
     <EditText
         android:id="@+id/rEmailAddress"
         android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:layout_marginTop="30dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="15dp"
         android:autofillHints=""
+        android:drawableStart="@drawable/mail"
         android:ems="10"
+        android:text=""
+        android:fontFamily="serif-monospace"
         android:hint="@string/emailaddress"
-        android:inputType="textEmailAddress" />
+        android:inputType="textEmailAddress"
+        android:textColorHint="#070707"
+        android:textSize="24sp" />
 
-    <EditText
-        android:id="@+id/rAddress"
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:layout_marginTop="30dp"
-        android:autofillHints=""
-        android:hint="@string/address"
-        android:inputType="text"
     <EditText
         android:id="@+id/rPassword"
         android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:layout_marginTop="30dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="15dp"
         android:autofillHints=""
-        android:ems="10"
-        android:hint="@string/password"
+        android:text=""
         android:drawableStart="@drawable/iconpassword"
-        android:inputType="textPassword" />
+        android:ems="10"
+        android:fontFamily="serif-monospace"
+        android:hint="@string/password"
+        android:inputType="textPassword"
+        android:textColorHint="#070707"
+        android:textSize="24sp" />
+
     <EditText
         android:id="@+id/rrPassword"
         android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:layout_marginTop="30dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="15dp"
         android:autofillHints=""
-        android:ems="10"
-        android:hint="@string/retypepassword"
+        android:text=""
         android:drawableStart="@drawable/iconpassword"
-        android:inputType="textPassword" />
+        android:ems="10"
+        android:fontFamily="serif-monospace"
+        android:hint="@string/retypepassword"
+        android:inputType="textPassword"
+        android:textColorHint="#070707"
+        android:textSize="24sp" />
 
     <Button
         android:id="@+id/rRegister"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_marginTop="30dp"
-        android:text="@string/register" />
-    <Button
-        android:id="@+id/rCancel"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_marginTop="30dp"
-        android:text="@string/cancel" />
+        android:layout_height="40dp"
+        android:layout_marginTop="15dp"
+        android:background="@android:color/holo_orange_light"
+        android:fontFamily="serif-monospace"
+        android:text="@string/register"
+        android:textColor="@android:color/background_dark"
+        android:textSize="24sp" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:id="@+id/older"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginTop="30dp"
+            android:text="@string/already_register" />
+
+        <TextView
+            android:id="@+id/register_login"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginTop="30dp"
+            android:paddingStart="10dp"
+            android:text="@string/Login" />
+
+    </LinearLayout>
 
 </LinearLayout>

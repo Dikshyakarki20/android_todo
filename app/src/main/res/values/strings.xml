@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">To-Do List</string>
+    <string name="app_name">ToDo List</string>
 
     <string name="main_activity_name">All Tasks</string>
     <string name="add_task_activity_name">Add a New Task</string>
@@ -25,7 +25,13 @@
     <string name="login">Login</string>
     <string name="register">Register</string>
     <string name="address">Address</string>
-    <string name="retypepassword">retypepassword</string>
+    <string name="retypepassword">Retypepassword</string>
     <string name="emailaddress">EmailAddress</string>
     <string name="cancel">Cancel</string>
+    <string name="new_user">NewUser?</string>
+    <string name="already_register">AlreadyRegister?</string>
+    <string name="Login">Click Here to Login</string>
+    <string name="Register">Click Here to Register</string>
+
+
 </resources>

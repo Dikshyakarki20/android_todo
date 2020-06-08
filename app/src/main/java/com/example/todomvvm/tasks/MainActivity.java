@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.room.Room;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -17,6 +18,9 @@ import com.example.todomvvm.R;
 import com.example.todomvvm.database.AppDatabase;
 import com.example.todomvvm.database.Repository;
 import com.example.todomvvm.database.TaskEntry;
+import com.example.todomvvm.database.UserDao;
+import com.example.todomvvm.database.UserDatabase;
+import com.example.todomvvm.database.UserEntry;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.List;
@@ -29,8 +33,6 @@ public class MainActivity extends AppCompatActivity implements TaskAdapter.ItemC
     // Member variables for the adapter and RecyclerView
     private RecyclerView mRecyclerView;
     private TaskAdapter mAdapter;
-
-
     MainActivityViewModel viewModel;
 
     @Override

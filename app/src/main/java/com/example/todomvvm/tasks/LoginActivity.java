@@ -11,6 +11,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.todomvvm.MainFragment;
 import com.example.todomvvm.R;
 import com.example.todomvvm.database.UserDao;
 import com.example.todomvvm.database.UserDatabase;
@@ -63,7 +64,7 @@ public class LoginActivity extends AppCompatActivity {
                      return;
                  }
                  if(userentry!=null){
-                     Intent i = new Intent(LoginActivity.this,MainActivity.class);
+                     Intent i = new Intent(LoginActivity.this, MainFragment.class);
                      i.putExtra("UserEntry",userentry);
                      startActivity(i);
                      finish();

@@ -1,14 +1,18 @@
 package com.example.todomvvm.addedittask;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.speech.RecognizerIntent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.RadioGroup;
 
 import com.example.todomvvm.R;
@@ -16,6 +20,7 @@ import com.example.todomvvm.database.AppDatabase;
 import com.example.todomvvm.database.Repository;
 import com.example.todomvvm.database.TaskEntry;
 
+import java.util.ArrayList;
 import java.util.Date;
 
 public class AddEditTaskActivity extends AppCompatActivity {
@@ -36,19 +41,30 @@ public class AddEditTaskActivity extends AppCompatActivity {
     EditText mEditText;
     RadioGroup mRadioGroup;
     Button mButton;
-
+    ImageView voiceButton;
+    private static final int RECOGNIZER_RESULT = 1;
     private int mTaskId = DEFAULT_TASK_ID;
 
 
     AddEditTaskViewModel viewModel;
 
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+
+        if (requestCode == RECOGNIZER_RESULT && resultCode == RESULT_OK){
+            ArrayList<String> matches = data.getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS);
+            mEditText.setText(matches.get(0));
+        }
+        super.onActivityResult(requestCode, resultCode, data);
+    }
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_edit_task);
+        initViews( );
 
 
 
-        initViews();
 
         if (savedInstanceState != null && savedInstanceState.containsKey(INSTANCE_TASK_ID)) {
             mTaskId = savedInstanceState.getInt(INSTANCE_TASK_ID, DEFAULT_TASK_ID);
@@ -99,6 +115,17 @@ public class AddEditTaskActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 onSaveButtonClicked();
+            }
+        });
+        voiceButton = (ImageView)findViewById(R.id.voice);
+        voiceButton.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View v) {
+                Intent voiceIntent = new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH);
+                voiceIntent.putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL,RecognizerIntent.LANGUAGE_MODEL_FREE_FORM);
+                voiceIntent.putExtra(RecognizerIntent.EXTRA_PROMPT,"Speech to Text");
+                startActivityForResult(voiceIntent,RECOGNIZER_RESULT);
             }
         });
     }

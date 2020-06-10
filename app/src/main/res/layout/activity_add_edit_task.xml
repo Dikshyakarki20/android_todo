@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-   <!-- This vertical linear layout contains all the views in the AddTaskActivity code.
-    This includes an EditText to adtaskEntrytask description, and buttons to select a priority
-    -->
+<!-- This vertical linear layout contains all the views in the AddTaskActivity code.
+ This includes an EditText to adtaskEntrytask description, and buttons to select a priority
+ -->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -12,17 +12,29 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingStart="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin">
-
-    <!-- EditText for getttaskEntrytask description input -->
-    <EditText
-        android:id="@+id/editTextTaskDescription"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="start"
-        android:hint="@string/edit_task_description"
-        android:paddingBottom="@dimen/activity_horizontal_margin" />
+        android:orientation="horizontal">
+        <!-- EditText for getttaskEntrytask description input -->
+        <EditText
+            android:id="@+id/editTextTaskDescription"
+            android:layout_width="340dp"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:hint="@string/edit_task_description"
+            android:paddingBottom="@dimen/activity_horizontal_margin" />
 
-    <!-- TextView and FrameLayout (which contains buttons) for Priority Selection -->
+        <!-- TextView and FrameLayout (which contains buttons) for Priority Selection -->
+        <ImageView
+            android:id="@+id/voice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="?selectableItemBackground"
+            android:src="@drawable/ic_mic_black_24dp" />
+    </LinearLayout>
+
     <TextView
         style="@style/TextAppearance.AppCompat.Medium"
         android:layout_width="wrap_content"

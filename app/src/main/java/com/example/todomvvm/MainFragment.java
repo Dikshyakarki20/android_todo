@@ -2,7 +2,8 @@ package com.example.todomvvm;
 import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
-import com.example.todomvvm.adapter.ReminderFragment;
+
+import com.example.todomvvm.adapter.ProfileFragment;
 import com.example.todomvvm.adapter.TabAdapter;
 import com.example.todomvvm.adapter.TodolistFragment;
 import com.google.android.material.tabs.TabLayout;
@@ -12,8 +13,7 @@ public class MainFragment extends AppCompatActivity {
     private ViewPager viewPager;
     private int[] tabIcons = {
             R.drawable.ic_home_black_24dp,
-            R.drawable.ic_playlist_add_black_24dp,
-            R.drawable.ic_access_alarm_black_24dp
+            R.drawable.ic_person_black_24dp
     };
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,8 +23,7 @@ public class MainFragment extends AppCompatActivity {
         tabLayout = (TabLayout) findViewById(R.id.tabLayout);
         adapter = new TabAdapter(getSupportFragmentManager(), this);
         adapter.addFragment(new TodolistFragment(),"Todo List", tabIcons[0]);
-        adapter.addFragment(new ReminderFragment(),"Add List", tabIcons[1]);
-        adapter.addFragment(new TodolistFragment(),"Reminder",tabIcons[2]);
+        adapter.addFragment(new ProfileFragment(),"Profile",tabIcons[1]);
         viewPager.setAdapter(adapter);
            tabLayout.setupWithViewPager(viewPager);
            highLightCurrentTab(0);

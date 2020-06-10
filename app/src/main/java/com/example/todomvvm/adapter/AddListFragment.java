@@ -11,10 +11,10 @@ import com.example.todomvvm.R;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link RemindersFragment#newInstance} factory method to
+ * Use the {@link AddListFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class RemindersFragment extends Fragment {
+public class AddListFragment extends Fragment {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -24,7 +24,7 @@ public class RemindersFragment extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public RemindersFragment() {
+    public AddListFragment() {
         // Required empty public constructor
     }
 
@@ -37,8 +37,8 @@ public class RemindersFragment extends Fragment {
      * @return A new instance of fragment ReminderFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static RemindersFragment newInstance(String param1, String param2) {
-        RemindersFragment fragment = new RemindersFragment();
+    public static AddListFragment newInstance(String param1, String param2) {
+        AddListFragment fragment = new AddListFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -59,6 +59,6 @@ public class RemindersFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_reminders, container, false);
+        return inflater.inflate(R.layout.fragment_addlist, container, false);
     }
 }

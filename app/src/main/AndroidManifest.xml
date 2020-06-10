@@ -14,15 +14,15 @@
             android:resource="@layout/bar_layout" />
 
         <activity android:name=".tasks.RegisterActivity" />
-        <activity android:name="MainFragment" />
+        <activity android:name="MainFragment"/>
         <activity
             android:name=".addedittask.AddEditTaskActivity"
             android:label="Add a new Task" />
         <activity android:name=".tasks.LoginActivity">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.MAIN"/>
 
-                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
     </application>

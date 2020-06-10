@@ -1,15 +1,10 @@
 package com.example.todomvvm.adapter;
-
 import android.os.Bundle;
-
 import androidx.fragment.app.Fragment;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-
 import com.example.todomvvm.R;
-
 /**
  * A simple {@link Fragment} subclass.
  * Use the {@link ReminderFragment#newInstance} factory method to
@@ -46,7 +41,6 @@ public class ReminderFragment extends Fragment {
         fragment.setArguments(args);
         return fragment;
     }
-
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -55,11 +49,13 @@ public class ReminderFragment extends Fragment {
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
     }
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_reminder, container, false);
+
+
+
     }
 }

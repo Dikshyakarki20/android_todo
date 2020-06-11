@@ -1,20 +1,28 @@
 package com.example.todomvvm;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.View;
+import android.widget.TextView;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 
 import com.example.todomvvm.adapter.ProfileFragment;
 import com.example.todomvvm.adapter.TabAdapter;
 import com.example.todomvvm.adapter.TodolistFragment;
+import com.example.todomvvm.database.UserEntry;
 import com.google.android.material.tabs.TabLayout;
 public class MainFragment extends AppCompatActivity {
     private TabAdapter adapter;
     private TabLayout tabLayout;
     private ViewPager viewPager;
+    UserEntry userentry;
+    TextView texter;
     private int[] tabIcons = {
             R.drawable.ic_home_black_24dp,
             R.drawable.ic_person_black_24dp
     };
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,7 +47,19 @@ public class MainFragment extends AppCompatActivity {
                public void onPageScrollStateChanged(int state) {
                }
            });
+        userentry = (UserEntry) getIntent().getSerializableExtra("UserEntry");
+        texter = findViewById(R.id.texter);
+        if (userentry !=null){
+            texter.setText(userentry.getUserName());
+        }
        }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_option,menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
     private void highLightCurrentTab(int position) {
         for (int i = 0; i < tabLayout.getTabCount(); i++) {
             TabLayout.Tab tab = tabLayout.getTabAt(i);
@@ -51,5 +71,8 @@ public class MainFragment extends AppCompatActivity {
         assert tab != null;
         tab.setCustomView(null);
         tab.setCustomView(adapter.getSelectedTabView(position));
+
     }
+
 }
+

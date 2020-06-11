@@ -19,6 +19,10 @@
         app:tabMode="fixed">
 
     </com.google.android.material.tabs.TabLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/texter"/>
     
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/viewPager"

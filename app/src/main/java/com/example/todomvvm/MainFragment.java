@@ -47,11 +47,7 @@ public class MainFragment extends AppCompatActivity {
                public void onPageScrollStateChanged(int state) {
                }
            });
-        userentry = (UserEntry) getIntent().getSerializableExtra("UserEntry");
-        texter = findViewById(R.id.texter);
-        if (userentry !=null){
-            texter.setText(userentry.getUserName());
-        }
+
        }
 
     @Override

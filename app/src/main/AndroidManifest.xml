@@ -12,6 +12,9 @@
         <meta-data
             android:name="com.google.android.actions"
             android:resource="@layout/bar_layout" />
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
 
         <activity android:name=".tasks.RegisterActivity" />
         <activity android:name="MainFragment"/>

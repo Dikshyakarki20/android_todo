@@ -1,14 +1,70 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".adapter.ProfileFragment">
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.todomvvm.adapter.ProfileFragment"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:background="@drawable/profilebanner"
+        android:padding="20dp">
+        <ImageView
+            android:id="@+id/profile_image"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_person"/>
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+        <TextView
+            android:id="@+id/fullname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/profile_image"
+            android:fontFamily="@font/abhaya_libre_bold"
+            android:includeFontPadding="false"
+            android:text="Taimoor Sikander"
+            android:textColor="#0C0C0C"
+            android:textSize="25sp"
+            android:textStyle="italic" />
+
+    </RelativeLayout>
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment"/>
+        android:orientation="vertical"
+        android:background="#ffffff">
 
-</FrameLayout>
+        <TextView
+            android:id="@+id/full_name_profile"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:drawableLeft="@drawable/ic_person_black_24dp"
+            android:fontFamily="@font/abhaya_libre_bold"
+            android:hint="Dikshya karki"
+            android:padding="15dp"
+            android:textSize="25dp" />
+
+        <TextView
+            android:id="@+id/full_email_profile"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:drawableLeft="@drawable/ic_email_black_24dp"
+            android:fontFamily="@font/abhaya_libre_bold"
+            android:hint="dikshyakarki55@gmail.com"
+            android:padding="15dp"
+            android:textSize="22dp" />
+        <Button
+            android:id="@+id/buttonLogout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Logout"
+            android:layout_gravity="center"
+            android:layout_marginTop="60dp"
+            android:background="#6DD4E1"/>
+    </LinearLayout>
+</LinearLayout>

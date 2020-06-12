@@ -102,7 +102,6 @@ public class MainFragment extends AppCompatActivity {
                 return super.onOptionsItemSelected(menu);
         }
 
-
     }
 
 

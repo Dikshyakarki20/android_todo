@@ -8,11 +8,11 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="8dp"
-    tools:context="com.example.android.todolist.MainActivity">
+   >
 
     <LinearLayout
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="80dp"
         android:layout_weight="1"
         android:orientation="vertical">
 
@@ -22,8 +22,22 @@
             style="@style/TextAppearance.AppCompat.Medium"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="@android:color/primary_text_light"
-            tools:text="Description" />
+            android:textColor="#020202"
+            android:fontFamily="@font/abhaya_libre_bold"
+            android:textSize="24sp"
+            tools:text="Description"
+            android:background="#FFC107"/>
+
+        <TextView
+            android:id="@+id/taskDate"
+            style="@style/TextAppearance.AppCompat.Medium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/abhaya_libre_bold"
+            android:textSize="22sp"
+            android:textColor="#020202"
+            tools:text="11/11/11"
+            android:background="#94A7D8"/>
 
         <!-- TextView that displays the update date -->
         <TextView
@@ -31,7 +45,10 @@
             style="@style/TextAppearance.AppCompat.Small"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="@android:color/primary_text_light"
+            android:fontFamily="@font/abhaya_libre_bold"
+            android:textColor="#020202"
+            android:textSize="22sp"
+            android:background="#94A7D8"
             tools:text="11/11/1111" />
 
     </LinearLayout>

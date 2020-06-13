@@ -5,15 +5,20 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
+import android.app.DatePickerDialog;
+import android.app.Dialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.speech.RecognizerIntent;
 import android.view.View;
 import android.widget.Button;
+import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.RadioGroup;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.todomvvm.R;
 import com.example.todomvvm.database.AppDatabase;
@@ -21,6 +26,7 @@ import com.example.todomvvm.database.Repository;
 import com.example.todomvvm.database.TaskEntry;
 
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Date;
 
 public class AddEditTaskActivity extends AppCompatActivity {
@@ -39,8 +45,14 @@ public class AddEditTaskActivity extends AppCompatActivity {
     private static final String TAG = AddEditTaskActivity.class.getSimpleName();
     // Fields for views
     EditText mEditText;
+    Button mEnterDate;
     RadioGroup mRadioGroup;
-    Button mButton;
+    private DatePicker datePicker;
+    private Calendar calendar;
+    private TextView dateView;
+    private int year, month , day;
+    Button mButton, clndButton;
+
     ImageView voiceButton;
     private static final int RECOGNIZER_RESULT = 1;
     private int mTaskId = DEFAULT_TASK_ID;
@@ -102,13 +114,57 @@ public class AddEditTaskActivity extends AppCompatActivity {
         outState.putInt(INSTANCE_TASK_ID, mTaskId);
         super.onSaveInstanceState(outState);
     }
+    @SuppressWarnings("deprecation")
+    public void setDate(View view) {
+        showDialog(999);
+        Toast.makeText(getApplicationContext(), "ca",
+                Toast.LENGTH_SHORT)
+                .show();
+    }
 
+    @Override
+    protected Dialog onCreateDialog(int id) {
+        // TODO Auto-generated method stub
+        if (id == 999) {
+            return new DatePickerDialog(this,
+                    myDateListener, year, month, day);
+        }
+        return null;
+    }
+
+    private DatePickerDialog.OnDateSetListener myDateListener = new
+            DatePickerDialog.OnDateSetListener() {
+                @Override
+                public void onDateSet(DatePicker arg0,
+                                      int arg1, int arg2, int arg3) {
+                    // TODO Auto-generated method stub
+                    // arg1 = year
+                    // arg2 = month
+                    // arg3 = day
+                    showDate(arg1, arg2+1, arg3);
+                }
+            };
+
+    private void showDate(int year, int month, int day) {
+        dateView.setText(new StringBuilder().append(day).append("/")
+                .append(month).append("/").append(year));
+    }
     /**
      * initViews is called from onCreate to init the member variable views
      */
     private void initViews() {
         mEditText = findViewById(R.id.editTextTaskDescription);
         mRadioGroup = findViewById(R.id.radioGroup);
+
+        clndButton = (Button) findViewById(R.id.btncalendar);
+        dateView = (TextView) findViewById(R.id.showdate) ;
+        calendar = Calendar.getInstance();
+        year = calendar.get(Calendar.YEAR);
+
+        month = calendar.get(Calendar.MONTH);
+        day = calendar.get(Calendar.DAY_OF_MONTH);
+        showDate(year, month+1, day);
+
 
         mButton = findViewById(R.id.saveButton);
         mButton.setOnClickListener(new View.OnClickListener() {
@@ -142,6 +198,9 @@ public class AddEditTaskActivity extends AppCompatActivity {
         mEditText.setText(task.getDescription());
         setPriorityInViews(task.getPriority());
 
+        dateView.setText(task.getEnterdate());
+        setPriorityInViews(task.getPriority());
+
     }
 
     /**
@@ -152,8 +211,9 @@ public class AddEditTaskActivity extends AppCompatActivity {
         // Not yet implemented
         String description = mEditText.getText().toString();
         int priority = getPriorityFromViews();
+        String enterdate = dateView.getText().toString();
         Date date = new Date();
-        TaskEntry todo = new TaskEntry(description, priority, date);
+        TaskEntry todo = new TaskEntry(description, priority,enterdate, date);
         if(mTaskId == DEFAULT_TASK_ID)
             viewModel.insertTask(todo);
         else{
@@ -193,6 +253,7 @@ public class AddEditTaskActivity extends AppCompatActivity {
         switch (priority) {
             case PRIORITY_HIGH:
                 ((RadioGroup) findViewById(R.id.radioGroup)).check(R.id.radButton1);
+
                 break;
             case PRIORITY_MEDIUM:
                 ((RadioGroup) findViewById(R.id.radioGroup)).check(R.id.radButton2);
@@ -201,4 +262,6 @@ public class AddEditTaskActivity extends AppCompatActivity {
                 ((RadioGroup) findViewById(R.id.radioGroup)).check(R.id.radButton3);
         }
     }
+
+
 }

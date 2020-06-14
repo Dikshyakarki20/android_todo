@@ -13,6 +13,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 
 import com.example.todomvvm.adapter.ProfileFragment;
+import com.example.todomvvm.adapter.ReminderFragment;
 import com.example.todomvvm.adapter.TabAdapter;
 import com.example.todomvvm.adapter.TodolistFragment;
 import com.example.todomvvm.database.UserEntry;
@@ -27,7 +28,8 @@ public class MainFragment extends AppCompatActivity {
     TextView texter;
     private int[] tabIcons = {
             R.drawable.ic_home_black_24dp,
-            R.drawable.ic_person_black_24dp
+            R.drawable.ic_person_black_24dp,
+            R.drawable.ic_date_range_black_24dp
     };
 
     @Override
@@ -39,6 +41,7 @@ public class MainFragment extends AppCompatActivity {
         adapter = new TabAdapter(getSupportFragmentManager(), this);
         adapter.addFragment(new TodolistFragment(),"Todo List", tabIcons[0]);
         adapter.addFragment(new ProfileFragment(),"Profile",tabIcons[1]);
+        adapter.addFragment(new ReminderFragment(),"Reminder",tabIcons[2]);
         viewPager.setAdapter(adapter);
         tabLayout.setupWithViewPager(viewPager);
         highLightCurrentTab(0);

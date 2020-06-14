@@ -8,12 +8,13 @@ import androidx.room.OnConflictStrategy;
 import androidx.room.Query;
 import androidx.room.Update;
 
+import java.util.Date;
 import java.util.List;
 
 @Dao
 public interface TaskDao {
 
-    @Query("select * from task order by priority")
+    @Query("select * from task order by enterdate ASC")
     LiveData<List<TaskEntry>> loadAllTasks();
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
@@ -27,5 +28,9 @@ public interface TaskDao {
 
     @Query("Select * from task where id =:taskId")
     LiveData<TaskEntry> loadTAskById(int taskId);
+
+    @Query("Select * from task where  enterdate = '14/06/2020'")
+    LiveData<List<TaskEntry>> loadTodayTasks();
+
 
 }

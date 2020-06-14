@@ -29,8 +29,6 @@ public class ProfileFragment extends Fragment {
         // Required empty public constructor
     }
 
-
-
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -52,7 +50,7 @@ public class ProfileFragment extends Fragment {
         }
         Intent in = getActivity().getIntent();
         String string = in.getStringExtra("message");
-        Logout = (Button) view.findViewById(R.id.buttonLogout) ;
+        Logout = (Button) view.findViewById(R.id.buttonLogout);
         Logout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

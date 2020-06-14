@@ -16,6 +16,10 @@ public class Repository {
        return dao.loadAllTasks();
     }
 
+    public LiveData<List<TaskEntry>> getTodayTasks(){
+        return dao.loadTodayTasks();
+    }
+
     public LiveData<TaskEntry> getTaskById(int taskId){
         return dao.loadTAskById(taskId);
     }

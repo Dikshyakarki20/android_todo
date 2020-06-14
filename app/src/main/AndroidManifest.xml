@@ -17,11 +17,12 @@
             android:resource="@array/preloaded_fonts" />
 
         <activity android:name=".tasks.RegisterActivity" />
+        <activity android:name=".tasks.LoginActivity" />
         <activity android:name="MainFragment"/>
         <activity
             android:name=".addedittask.AddEditTaskActivity"
             android:label="Add a new Task" />
-        <activity android:name=".tasks.LoginActivity">
+        <activity android:name=".SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 

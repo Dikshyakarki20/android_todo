@@ -213,6 +213,13 @@ public class AddEditTaskActivity extends AppCompatActivity {
         int priority = getPriorityFromViews();
         String enterdate = dateView.getText().toString();
         Date date = new Date();
+
+        if(description.isEmpty()){
+            mEditText.setError("Description Field is Empty");
+            mEditText.requestFocus();
+            return;
+        }
+
         TaskEntry todo = new TaskEntry(description, priority,enterdate, date);
         if(mTaskId == DEFAULT_TASK_ID)
             viewModel.insertTask(todo);

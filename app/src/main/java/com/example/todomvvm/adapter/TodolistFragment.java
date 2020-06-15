@@ -25,11 +25,7 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.List;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link TodolistFragment} factory method to
- * create an instance of this fragment.
- */
+
 public class TodolistFragment extends Fragment implements TaskAdapter.ItemClickListener {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER

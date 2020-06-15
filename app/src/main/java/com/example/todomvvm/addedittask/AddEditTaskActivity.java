@@ -7,9 +7,12 @@ import androidx.lifecycle.ViewModelProviders;
 
 import android.app.DatePickerDialog;
 import android.app.Dialog;
+
+import android.app.TimePickerDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.speech.RecognizerIntent;
+import android.text.format.DateFormat;
 import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
@@ -18,6 +21,7 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.RadioGroup;
 import android.widget.TextView;
+import android.widget.TimePicker;
 import android.widget.Toast;
 
 import com.example.todomvvm.R;
@@ -29,7 +33,7 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 
-public class AddEditTaskActivity extends AppCompatActivity {
+public class AddEditTaskActivity extends AppCompatActivity  implements DatePickerDialog.OnDateSetListener, TimePickerDialog.OnTimeSetListener{
 
     // Extra for the task ID to be received in the intent
     public static final String EXTRA_TASK_ID = "extraTaskId";
@@ -50,9 +54,10 @@ public class AddEditTaskActivity extends AppCompatActivity {
     private DatePicker datePicker;
     private Calendar calendar;
     private TextView dateView;
-    private int year, month , day;
-    Button mButton, clndButton;
 
+    Button mButton, clndButton;
+    int day, month, year, hour, minute;
+    int myday, myMonth, myYear, myHour, myMinute;
     ImageView voiceButton;
     private static final int RECOGNIZER_RESULT = 1;
     private int mTaskId = DEFAULT_TASK_ID;
@@ -114,41 +119,25 @@ public class AddEditTaskActivity extends AppCompatActivity {
         outState.putInt(INSTANCE_TASK_ID, mTaskId);
         super.onSaveInstanceState(outState);
     }
-    @SuppressWarnings("deprecation")
-    public void setDate(View view) {
-        showDialog(999);
-        Toast.makeText(getApplicationContext(), "ca",
-                Toast.LENGTH_SHORT)
-                .show();
+    public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
+        myYear = year;
+        myday = day;
+        myMonth = month;
+        Calendar c = Calendar.getInstance();
+        hour = c.get(Calendar.HOUR);
+        minute = c.get(Calendar.MINUTE);
+        TimePickerDialog timePickerDialog = new TimePickerDialog(AddEditTaskActivity.this, AddEditTaskActivity.this, hour, minute, DateFormat.is24HourFormat(this));
+        timePickerDialog.show();
     }
-
     @Override
-    protected Dialog onCreateDialog(int id) {
-        // TODO Auto-generated method stub
-        if (id == 999) {
-            return new DatePickerDialog(this,
-                    myDateListener, year, month, day);
-        }
-        return null;
+    public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
+        myHour = hourOfDay;
+        myMinute = minute;
+        dateView.setText(myYear + "/" + myMonth + "/" + myday + "\n" +
+                "Time: " + myHour + "/" + myMinute);
     }
 
-    private DatePickerDialog.OnDateSetListener myDateListener = new
-            DatePickerDialog.OnDateSetListener() {
-                @Override
-                public void onDateSet(DatePicker arg0,
-                                      int arg1, int arg2, int arg3) {
-                    // TODO Auto-generated method stub
-                    // arg1 = year
-                    // arg2 = month
-                    // arg3 = day
-                    showDate(arg1, arg2+1, arg3);
-                }
-            };
 
-    private void showDate(int year, int month, int day) {
-        dateView.setText(new StringBuilder().append(day).append("/")
-                .append(month).append("/").append(year));
-    }
     /**
      * initViews is called from onCreate to init the member variable views
      */
@@ -158,13 +147,17 @@ public class AddEditTaskActivity extends AppCompatActivity {
 
         clndButton = (Button) findViewById(R.id.btncalendar);
         dateView = (TextView) findViewById(R.id.showdate) ;
-        calendar = Calendar.getInstance();
-        year = calendar.get(Calendar.YEAR);
-
-        month = calendar.get(Calendar.MONTH);
-        day = calendar.get(Calendar.DAY_OF_MONTH);
-        showDate(year, month+1, day);
-
+        clndButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Calendar calendar = Calendar.getInstance();
+                year = calendar.get(Calendar.YEAR);
+                month = calendar.get(Calendar.MONTH);
+                day = calendar.get(Calendar.DAY_OF_MONTH);
+                DatePickerDialog datePickerDialog = new DatePickerDialog(AddEditTaskActivity.this, AddEditTaskActivity.this,year, month,day);
+                datePickerDialog.show();
+            }
+        });
 
         mButton = findViewById(R.id.saveButton);
         mButton.setOnClickListener(new View.OnClickListener() {
@@ -269,6 +262,5 @@ public class AddEditTaskActivity extends AppCompatActivity {
                 ((RadioGroup) findViewById(R.id.radioGroup)).check(R.id.radButton3);
         }
     }
-
 
 }

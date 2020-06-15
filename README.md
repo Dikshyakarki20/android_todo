@@ -8,7 +8,7 @@ Todolist is an android application which is designed to keep record of activitie
 
 ## Features
 
-### Some basic features of this ToDolist include add new tasks, edit an existing task, delete an existing task by swiping the task , set the task priority to high, medium or low. Besides these other features are mentioned below:
+Some basic features of this ToDolist include add new tasks, edit an existing task, delete an existing task by swiping the task, set the task priority to high, medium or low. Besides these other features are mentioned below:
 
 - Register and Login 
 
@@ -16,26 +16,98 @@ Todolist is an android application which is designed to keep record of activitie
 
 - Menu that display About page
 
-- Navigation bar 
+-  Swipe Navigation tab
 
-## Framework
+- Calendar 
+
+- TimePicker
+
+## Database
+
+- RoomDatabase
+
+## Framework Used
 
 ### Model View View Model (MVVM) 
 
-#### MVVM is a structural design pattern that seperates objects into three distinct groups:
+ MVVM is a structural design pattern that seperates objects into three distinct groups:
 
-- Models
+#### Models
 
-- Views
+##### Database
 
-- View Models
+- App Database
 
-## Database 
+- DateConverter
 
-### Room Database 
+- TaskDao
 
-## Android Components
+- TaskEntry
+
+- UserDao
+
+- UserDatabase
+
+- UserEntry
+
+##### Adapter
+
+- TabAdapter
+
+- TaskAdapter
+
+#### Views
+
+<i>Fragment </i>
+
+ - ProfileFragment
+  
+ - ReminderFragment
+ 
+ - TodolistFragment
+ 
+ <i>Activity</i>
+ 
+ - AddEditTaskActivity
+ 
+ - LoginActivity
+ 
+ - RegisterActivity
+ 
+ - MainActivity
+ 
+ - MainFragment
+
+#### View Models
+
+- AddEditTaskViewModel
+
+- AddEditTaskViewModelFactory
+
+- TaskDateViewModel
+
+- MainActivityViewModel
 
 ## Layout 
 
-## Coding Standards Used 
+- Relative Layout
+
+- Linear Layout
+
+- Scroll View
+
+- Frame Layout
+
+## Coding Standards Used
+
+- Proper Packaging
+
+- Proper Commenting
+
+- Proper Naming Convention
+
+- XML Naming Convention
+
+
+
+

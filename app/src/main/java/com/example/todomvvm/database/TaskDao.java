@@ -29,7 +29,7 @@ public interface TaskDao {
     @Query("Select * from task where id =:taskId")
     LiveData<TaskEntry> loadTAskById(int taskId);
 
-    @Query("Select * from task where  enterdate = '14/06/2020'")
+    @Query("Select * from task where  priority = '1'")
     LiveData<List<TaskEntry>> loadTodayTasks();
 
 

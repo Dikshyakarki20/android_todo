@@ -4,21 +4,15 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.Switch;
 import android.widget.TextView;
-
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
-
 import com.example.todomvvm.adapter.ProfileFragment;
 import com.example.todomvvm.adapter.ReminderFragment;
 import com.example.todomvvm.adapter.TabAdapter;
 import com.example.todomvvm.adapter.TodolistFragment;
 import com.example.todomvvm.database.UserEntry;
-import com.example.todomvvm.tasks.LoginActivity;
-import com.example.todomvvm.tasks.MainActivity;
 import com.google.android.material.tabs.TabLayout;
 public class MainFragment extends AppCompatActivity {
     private TabAdapter adapter;
@@ -29,7 +23,7 @@ public class MainFragment extends AppCompatActivity {
     private int[] tabIcons = {
             R.drawable.ic_home_black_24dp,
             R.drawable.ic_person_black_24dp,
-            R.drawable.ic_date_range_black_24dp
+            R.drawable.ic_star_black_24dp
     };
 
     @Override
@@ -41,7 +35,7 @@ public class MainFragment extends AppCompatActivity {
         adapter = new TabAdapter(getSupportFragmentManager(), this);
         adapter.addFragment(new TodolistFragment(),"Todo List", tabIcons[0]);
         adapter.addFragment(new ProfileFragment(),"Profile",tabIcons[1]);
-        adapter.addFragment(new ReminderFragment(),"Reminder",tabIcons[2]);
+        adapter.addFragment(new ReminderFragment(),"Important",tabIcons[2]);
         viewPager.setAdapter(adapter);
         tabLayout.setupWithViewPager(viewPager);
         highLightCurrentTab(0);

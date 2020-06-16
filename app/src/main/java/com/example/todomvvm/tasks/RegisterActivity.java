@@ -83,6 +83,7 @@ public class RegisterActivity extends AppCompatActivity {
                     userdao.insert(userentry);
                     Intent login = new Intent(RegisterActivity.this,LoginActivity.class);
                     startActivity(login);
+                    finish();
                 }
                 else {
                     Toast.makeText(RegisterActivity.this,"Password didn't match .Try again",Toast.LENGTH_SHORT).show();

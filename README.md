@@ -122,6 +122,42 @@ AddTask         |  UpdateTask       |
 :----------------------------:|:--------------------------------------:|
 <img src = "Screenshot/AddTask.gif" width="200" height="360">  |  <img src = "Screenshot/Update.gif" width="200" height="360">
 
+<hr>
+
+## Validation 
+
+### Register
+
+User-Name Validate      |  Email Validate                    |  Password Validate            |  Re-Password Validate
+:----------------------------:|:--------------------------------------:|:----------------------:|:-----------------
+<img src = "Screenshot/UsernameValidate.png" width="200" height="360">  |  <img src = "Screenshot/FieldValidate.png" width="200" height="360"> | <img src = "Screenshot/PasswordFieldValidate.png" width="200" height="360">  | <img src = "Screenshot/Repassvali.png" width="200" height="360">
+
+
+Un-Match Password      |
+:----------------------------:|
+<img src = "Screenshot/passdidn'tmatch.png" width="200" height="360"> 
+
+### Login
+
+User-Name Validate      |  Password Validate                   |  Non Register User |
+:----------------------------:|:--------------------------------------:|:----------------------:|
+<img src = "Screenshot/UserField.png" width="200" height="360">  |  <img src = "Screenshot/PasswordField.png" width="200" height="360"> | <img src = "Screenshot/NotMatch.png" width="200" height="360"> 
+
+## ToDoList App Guide
+
+Home Page      |                           Login Page                   |  Register Page            | UserLogin
+:----------------------------:|:--------------------------------------:|:----------------------:|:-----------------
+<img src = "Screenshot/Home.png" width="200" height="360">  |  <img src = "Screenshot/Login.png" width="200" height="360"> | <img src = "Screenshot/Register1.png" width="200" height="360">  | <img src = "Screenshot/Login1.png" width="200" height="360">
+
+ToDoPage      |                                  AddTask                   |  Task           |        Update
+:----------------------------:|:--------------------------------------:|:----------------------:|:-----------------
+<img src = "Screenshot/ToDoList.png" width="200" height="360">  |  <img src = "Screenshot/AddTask.png" width="200" height="360"> | <img src = "Screenshot/Task.png" width="200" height="360">  | <img src = "Screenshot/Update.png" width="200" height="360">
+
+Profile     |                                 PriorityHigh               |     About                |        
+:----------------------------:|:-------------------------------------- :|:----------------------:|
+<img src = "Screenshot/Profile.png" width="200" height="360">  |  <img src = "Screenshot/ImportantTab.png" width="200" height="360"> | <img src = "Screenshot/About.png" width="200" height="360">
+
+
 
 
 

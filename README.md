@@ -177,7 +177,41 @@ ViewModel: It acts as a link between the Model and the View. It’s responsible 
 
 <img src = "Screenshot/MVVM.png" height ="400" width = "350"> 
 
+### Activity LifeCycle
 
+Activity has four states
+active (or running at the top of the activity stack)
+paused — alive in memeory, visible, lost focus
+stopped — obscured by another activity, alive in memory, not visible
+paused or stopped — may lead to destroyed and restarted to previous state
+
+<img src = "Screenshot/ActivityLifecycle.png" height ="400" width = "350"> 
+
+### LifeCycle Class and Observer Pattern
+
+<img src = "Screenshot/Lifecyclestages.png" height ="400" width = "350"> 
+
+### Activity
+
+ Activity is a single screen in an app
+ 
+ ### Intent
+ 
+ Intent is a messaging object to request an action from another app component. 
+ Intent is a message object to start an activity.
+
+### Fragment
+
+A Fragment represents a behaviour or a portion of user interface, has its own lifecycle, receives its own input events, and can be added or removed while the activity is running. Fragment can be dynamically loaded allowing for flexible UI.
+
+<img src = "Screenshot/Activity.png" height ="400" width = "350"> 
+
+
+### ViewModel
+
+ViewModel is lifecycle aware. ViewModel objects scoped to the lifecycle passed to the ViewModelProvider.
+
+<img src = "Screenshot/ViewModelLifecycle.png" height ="400" width = "350"> 
 
 
 ## References

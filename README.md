@@ -149,13 +149,15 @@ Home Page      |                           Login Page                   |  Regis
 :----------------------------:|:--------------------------------------:|:----------------------:|:-----------------
 <img src = "Screenshot/Home.png" width="200" height="360">  |  <img src = "Screenshot/Login.png" width="200" height="360"> | <img src = "Screenshot/Register1.png" width="200" height="360">  | <img src = "Screenshot/Login1.png" width="200" height="360">
 
-ToDoPage      |                                  AddTask                   |  Task           |        Update
+ToDoPage       |                                  AddTask                   |  Task           |        Update
 :----------------------------:|:--------------------------------------:|:----------------------:|:-----------------
 <img src = "Screenshot/ToDoList.png" width="200" height="360">  |  <img src = "Screenshot/AddTask.png" width="200" height="360"> | <img src = "Screenshot/Task.png" width="200" height="360">  | <img src = "Screenshot/Update.png" width="200" height="360">
 
-Profile     |                                 PriorityHigh               |     About          |        
-:----------------------------:|:-------------------------------------- :|:----------------------:|
-<img src = "Screenshot/Profile.png" width="200" height="360">  |  <img src = "Screenshot/ImportantTab.png" width="200" height="360"> | <img src = "Screenshot/About.png" width="200" height="360">
+
+
+Profile                |           PriorityHigh               |     About          |        
+:----------------------------:|:--------------------------------------:|:--------------------------------------:|
+<img src = "Screenshot/Profile.png" width="200" height="360">  |  <img src = "Screenshot/ImportantTab.gif" width="200" height="360"> | <img src = "Screenshot/About.png" width="200" height="360">
 
 
 

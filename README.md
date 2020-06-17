@@ -153,7 +153,7 @@ ToDoPage      |                                  AddTask                   |  Ta
 :----------------------------:|:--------------------------------------:|:----------------------:|:-----------------
 <img src = "Screenshot/ToDoList.png" width="200" height="360">  |  <img src = "Screenshot/AddTask.png" width="200" height="360"> | <img src = "Screenshot/Task.png" width="200" height="360">  | <img src = "Screenshot/Update.png" width="200" height="360">
 
-Profile     |                                 PriorityHigh               |     About                |        
+Profile     |                                 PriorityHigh               |     About          |        
 :----------------------------:|:-------------------------------------- :|:----------------------:|
 <img src = "Screenshot/Profile.png" width="200" height="360">  |  <img src = "Screenshot/ImportantTab.png" width="200" height="360"> | <img src = "Screenshot/About.png" width="200" height="360">
 

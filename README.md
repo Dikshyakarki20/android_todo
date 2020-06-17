@@ -241,6 +241,28 @@ ViewModel is lifecycle aware. ViewModel objects scoped to the lifecycle passed t
 
 ## References
 
+- Navigation Components : https://developer.android.com/guide/navigation/navigation-getting-started
+
+- Material Components : https://material.io/develop/android/docs/getting-started/
+
+- Android Widget : https://developer.android.com/reference/android/widget/package-summary
+
+- Creating Task Fragment:https://github.com/ebbi/TaskFragment]TodoViewModel:https://github.com/ebbi/TodoViewModel
+
+- Todo app Model View ViewModel architecture:https://github.com/ebbi/TodoMVVM
+
+- Entity : https://developer.android.com/reference/android/arch/persistence/room/Entity
+
+- Options Menus  : https://developer.android.com/guide/topics/ui/menus
+
+- Create views : https://developer.android.com/training/data-storage/room/creating-views
+
+- Query for Database : https://developer.android.com/reference/android/arch/persistence/room/Query
+
+- Calendar Builder for Todo : https://developer.android.com/reference/java/util/Calendar.Builder
+
+
+
 ## License
 
 [![License](http://img.shields.io/:license-mit-blue.svg?style=flat-square)](http://badges.mit-license.org)

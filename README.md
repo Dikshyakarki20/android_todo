@@ -110,6 +110,19 @@ Some basic features of this ToDolist include add new tasks, edit an existing tas
 
 ## Features
 
+Login          |  Register                       | AddTask              |  UpdateTask
+:----------------------------:|:--------------------------------------:|:----------------------:|:-----------------
+<img src = "Screenshot/Login.png" width="200" height="360">  |  <img src = "Screenshot/Register.png" width="200" height="360">        |  <img src = "Screenshot/AddTask.gif" width="200" height="360">  | <img src = "Screenshot/Update.gif" width="200" height="360">
+
+Swipe Views in Tabs         |  Swipe to Delete                     |  About            |  Logout
+:----------------------------:|:--------------------------------------:|:----------------------:|:-----------------
+<img src = "Screenshot/SwipeTab.gif" width="200" height="360">  |  <img src = "Screenshot/SwipetoDelete.gif" width="200" height="360"> | <img src = "Screenshot/AboutPage.gif" width="200" height="360">  | <img src = "Screenshot/Logout.gif" width="200" height="360">
+
+
+
+
+
+
 
 
 

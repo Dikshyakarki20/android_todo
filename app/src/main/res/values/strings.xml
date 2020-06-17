@@ -35,6 +35,13 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="schedule_date">Schedule Date</string>
+    <string name="_02_02_2020">02/02/2020</string>
+    <string name="user_name">User Name</string>
+    <string name="email_user">EmailAddress</string>
+    <string name="logout">Logout</string>
+    <string name="mainmenu">MainMenu</string>
+    <string name="about">About</string>
 
 
 </resources>

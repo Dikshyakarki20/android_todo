@@ -50,7 +50,7 @@ public class ProfileFragment extends Fragment {
         }
         Intent in = getActivity().getIntent();
         String string = in.getStringExtra("message");
-        Logout = (Button) view.findViewById(R.id.buttonLogout);
+        Logout = view.findViewById(R.id.buttonLogout);
         Logout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

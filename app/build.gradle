@@ -45,7 +45,7 @@ dependencies {
     implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
     // implementation "androidx.room:room-guava:$room_version"
 
-    implementation 'com.android.support:design:27.0.2'
+
     implementation 'de.hdodenhof:circleimageview:2.1.0'
 
 }

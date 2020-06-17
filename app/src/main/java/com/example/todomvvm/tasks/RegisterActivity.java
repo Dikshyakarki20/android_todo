@@ -32,12 +32,12 @@ public class RegisterActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
-        rusername=(EditText)findViewById(R.id.rUsername);
-        remailaddress=(EditText)findViewById(R.id.rEmailAddress);
-        rpassword=(EditText)findViewById(R.id.rPassword);
-        rrpassword=(EditText)findViewById(R.id.rrPassword);
-        register =(Button)findViewById(R.id.rRegister);
-        RegisterLogin=(TextView)findViewById(R.id.register_login);
+        rusername= findViewById(R.id.rUsername);
+        remailaddress= findViewById(R.id.rEmailAddress);
+        rpassword= findViewById(R.id.rPassword);
+        rrpassword= findViewById(R.id.rrPassword);
+        register = findViewById(R.id.rRegister);
+        RegisterLogin= findViewById(R.id.register_login);
         RegisterLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

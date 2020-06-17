@@ -32,7 +32,8 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:background="?selectableItemBackground"
-            android:src="@drawable/ic_mic_black_24dp" />
+            android:src="@drawable/ic_mic_black_24dp"
+            android:contentDescription="Mic" />
 
 
     </LinearLayout>
@@ -98,7 +99,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
-            android:text="Schedule Date"
+            android:text="@string/schedule_date"
             android:textSize="15sp" />
         <LinearLayout
             android:layout_width="match_parent"
@@ -109,9 +110,8 @@
                 android:id="@+id/showdate"
                 android:layout_width="300dp"
                 android:layout_height="wrap_content"
-                android:text="02/02/2020"
+                android:text="@string/_02_02_2020"
                 android:focusableInTouchMode="false"
-                android:inputType="date"
                 android:paddingBottom="16dp"/>
 
 
@@ -120,8 +120,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:onClick="setDate"
-                android:drawableRight="@drawable/ic_date_range_black_24dp" />
+                android:drawableEnd="@drawable/ic_date_range_black_24dp"
+                android:onClick="setDate" />
         </LinearLayout>
     </LinearLayout>
 

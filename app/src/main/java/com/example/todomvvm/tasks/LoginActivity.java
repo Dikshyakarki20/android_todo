@@ -30,10 +30,10 @@ public class LoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-        textUsername =(EditText)findViewById(R.id.username);
-        textPassword = (EditText)findViewById(R.id.password);
-        buttonLogin = (Button)findViewById(R.id.login);
-        loginRegister = (TextView)findViewById(R.id.login_register);
+        textUsername = findViewById(R.id.username);
+        textPassword = findViewById(R.id.password);
+        buttonLogin = findViewById(R.id.login);
+        loginRegister = findViewById(R.id.login_register);
         database= Room.databaseBuilder(this,UserDatabase.class,"mi-database.db")
                 .allowMainThreadQueries()
                 .build();
@@ -70,7 +70,7 @@ public class LoginActivity extends AppCompatActivity {
                      finish();
                  }
                  else {
-                     Toast.makeText(LoginActivity.this,"Couldn't find username",Toast.LENGTH_SHORT).show();
+                     Toast.makeText(LoginActivity.this,"Username or Password didn't match",Toast.LENGTH_SHORT).show();
                  }
              }
          });

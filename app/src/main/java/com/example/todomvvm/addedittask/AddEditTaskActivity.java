@@ -145,8 +145,8 @@ public class AddEditTaskActivity extends AppCompatActivity  implements DatePicke
         mEditText = findViewById(R.id.editTextTaskDescription);
         mRadioGroup = findViewById(R.id.radioGroup);
 
-        clndButton = (Button) findViewById(R.id.btncalendar);
-        dateView = (TextView) findViewById(R.id.showdate) ;
+        clndButton = findViewById(R.id.btncalendar);
+        dateView = findViewById(R.id.showdate);
         clndButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -166,7 +166,7 @@ public class AddEditTaskActivity extends AppCompatActivity  implements DatePicke
                 onSaveButtonClicked();
             }
         });
-        voiceButton = (ImageView)findViewById(R.id.voice);
+        voiceButton = findViewById(R.id.voice);
         voiceButton.setOnClickListener(new View.OnClickListener(){
 
             @Override
@@ -263,4 +263,7 @@ public class AddEditTaskActivity extends AppCompatActivity  implements DatePicke
         }
     }
 
+    public void setDate(View view) {
+        //
+    }
 }

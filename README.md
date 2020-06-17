@@ -126,7 +126,7 @@ Room uses annotation with three main components
 
 1.9 Timepicker Branch
 
-<img src="Screenshot/branch.jpg" height="500" width="900">
+<img src="Screenshot/branch.png" height="500" width="900">
 
 
 ## Coding Standards Used
@@ -241,6 +241,15 @@ ViewModel is lifecycle aware. ViewModel objects scoped to the lifecycle passed t
 
 ## References
 
+## License
+
+[![License](http://img.shields.io/:license-mit-blue.svg?style=flat-square)](http://badges.mit-license.org)
+[![MIT License](https://img.shields.io/apm/l/atomic-design-ui.svg?)](https://github.com/tterb/atomic-design-ui/blob/master/LICENSEs)
+[![GPLv3 License](https://img.shields.io/badge/License-GPL%20v3-yellow.svg)](https://opensource.org/licenses/)
+[![AGPL License](https://img.shields.io/badge/license-AGPL-blue.svg)](http://www.gnu.org/licenses/agpl-3.0)  
+
+
+- **[MIT license](http://opensource.org/licenses/mit-license.php)**
 
 
 

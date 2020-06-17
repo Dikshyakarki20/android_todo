@@ -22,9 +22,15 @@ Some basic features of this ToDolist include add new tasks, edit an existing tas
 
 - TimePicker
 
-## Database
+## RoomDatabase
 
-- RoomDatabase
+Room uses annotation with three main components
+
+- @Entity - to define database table
+
+- @DAO - to provide an API for reading and writing data
+
+- @Database - represents a database holder
 
 ## Framework Used
 
@@ -159,6 +165,22 @@ Profile                |           PriorityHigh               |     About       
 :----------------------------:|:--------------------------------------:|:--------------------------------------:|
 <img src = "Screenshot/Profile.png" width="200" height="360">  |  <img src = "Screenshot/ImportantTab.gif" width="200" height="360"> | <img src = "Screenshot/About.png" width="200" height="360">
 
+## Documentation
+
+### MVVM
+
+MVVM is one of the architectural patterns which enhances separation of concerns, it allows separating the user interface logic from the business (or the back-end) logic. Its target (with other MVC patterns goal) is to achieve the following principle “Keeping UI code simple and free of app logic in order to make it easier to manage”.MVVM stands for Model, View, ViewModel.
+
+Model: This holds the data of the application. It cannot directly talk to the View. Generally, it’s recommended to expose the data to the ViewModel through Observables.
+View: It represents the UI of the application devoid of any Application Logic. It observes the ViewModel.
+ViewModel: It acts as a link between the Model and the View. It’s responsible for transforming the data from the Model. It provides data streams to the View. It also uses hooks or callbacks to update the View. It’ll ask for the data from the Model.
+
+<img src = "Screenshot/MVVM.png" width="200" height="360"> 
+
+
+
+
+## References
 
 
 

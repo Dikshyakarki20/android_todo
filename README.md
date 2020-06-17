@@ -104,6 +104,31 @@ Room uses annotation with three main components
 
 - Frame Layout
 
+## Development
+
+1. Master
+
+1.1 LoginRegister Branch
+
+1.2 Navigation  Branch 
+
+1.3 AddTodoList Branch
+
+1.4 SpeechtoText Branch
+
+1.5 Menu Branch
+
+1.6 Profile Branch
+
+1.7 Calendar Branch
+
+1.8 Reminder Branch
+
+1.9 Timepicker Branch
+
+<img src="Screenshot/branch.jpg" height="500" width="900">
+
+
 ## Coding Standards Used
 
 - Proper Packaging
@@ -163,7 +188,7 @@ ToDoPage       |                                  AddTask                   |  T
 
 Profile                |           PriorityHigh               |     About          |        
 :----------------------------:|:--------------------------------------:|:--------------------------------------:|
-<img src = "Screenshot/Profile.png" width="200" height="360">  |  <img src = "Screenshot/ImportantTab.gif" width="200" height="360"> | <img src = "Screenshot/About.png" width="200" height="360">
+<img src = "Screenshot/Profile.png" width="200" height="360">  |  <img src = "Screenshot/ImportantTab.gif" width="200" height="360"> | <img src = "Screenshot/About.png"  width="200" height="360">
 
 ## Documentation
 
@@ -175,7 +200,7 @@ Model: This holds the data of the application. It cannot directly talk to the Vi
 View: It represents the UI of the application devoid of any Application Logic. It observes the ViewModel.
 ViewModel: It acts as a link between the Model and the View. It’s responsible for transforming the data from the Model. It provides data streams to the View. It also uses hooks or callbacks to update the View. It’ll ask for the data from the Model.
 
-<img src = "Screenshot/MVVM.png" height ="400" width = "350"> 
+<img src = "Screenshot/MVVM.png" height ="400"  width = "350"> 
 
 ### Activity LifeCycle
 
@@ -185,11 +210,11 @@ paused — alive in memeory, visible, lost focus
 stopped — obscured by another activity, alive in memory, not visible
 paused or stopped — may lead to destroyed and restarted to previous state
 
-<img src = "Screenshot/ActivityLifecycle.png" height ="400" width = "350"> 
+<img src = "Screenshot/ActivityLifecycle.png"  height ="400" width = "350"> 
 
 ### LifeCycle Class and Observer Pattern
 
-<img src = "Screenshot/Lifecyclestages.png" height ="400" width = "350"> 
+<img src = "Screenshot/Lifecyclestages.png"  height ="400" width = "350"> 
 
 ### Activity
 
@@ -204,14 +229,14 @@ paused or stopped — may lead to destroyed and restarted to previous state
 
 A Fragment represents a behaviour or a portion of user interface, has its own lifecycle, receives its own input events, and can be added or removed while the activity is running. Fragment can be dynamically loaded allowing for flexible UI.
 
-<img src = "Screenshot/Activity.png" height ="400" width = "350"> 
+<img src = "Screenshot/Activity.png"  height ="400" width = "350"> 
 
 
 ### ViewModel
 
 ViewModel is lifecycle aware. ViewModel objects scoped to the lifecycle passed to the ViewModelProvider.
 
-<img src = "Screenshot/ViewModelLifecycle.png" height ="400" width = "350"> 
+<img src = "Screenshot/ViewModelLifecycle.png"  height ="400" width = "350"> 
 
 
 ## References

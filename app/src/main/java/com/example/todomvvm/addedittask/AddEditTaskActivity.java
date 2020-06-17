@@ -264,6 +264,6 @@ public class AddEditTaskActivity extends AppCompatActivity  implements DatePicke
     }
 
     public void setDate(View view) {
-        //
+        ///
     }
 }

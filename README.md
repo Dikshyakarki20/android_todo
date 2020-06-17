@@ -112,7 +112,7 @@ Some basic features of this ToDolist include add new tasks, edit an existing tas
 
 Login          |  Register                       | Calender             |  Time
 :----------------------------:|:--------------------------------------:|:----------------------:|:-----------------
-<img src = "Screenshot/Login.png" width="200" height="360">  |  <img src = "Screenshot/Register.png" width="200" height="360">        |  <img src = "Screenshot/Calendar.png" width="200" height="360">  | <img src = "Time.png" width="200" height="360">
+<img src = "Screenshot/Login.png" width="200" height="360">  |  <img src = "Screenshot/Register.png" width="200" height="360">        |  <img src = "Screenshot/Calender.png" width="200" height="360">  | <img src = "Screenshot/Time.png" width="200" height="360">
 
 Swipe Views in Tabs         |  Swipe to Delete                     |  About            |  Logout
 :----------------------------:|:--------------------------------------:|:----------------------:|:-----------------

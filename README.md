@@ -141,7 +141,7 @@ Room uses annotation with three main components
 
 ## Features
 
-Login          |  Register                       | Calender             |  Time
+Login          |                              Register                       | Calender             |  Time
 :----------------------------:|:--------------------------------------:|:----------------------:|:-----------------
 <img src = "Screenshot/Login.png" width="200" height="360">  |  <img src = "Screenshot/Register.png" width="200" height="360">        |  <img src = "Screenshot/Calender.png" width="200" height="360">  | <img src = "Screenshot/Time.png" width="200" height="360">
 
@@ -149,9 +149,9 @@ Swipe Views in Tabs         |  Swipe to Delete                     |  About     
 :----------------------------:|:--------------------------------------:|:----------------------:|:-----------------
 <img src = "Screenshot/SwipeTab.gif" width="200" height="360">  |  <img src = "Screenshot/SwipetoDelete.gif" width="200" height="360"> | <img src = "Screenshot/AboutPage.gif" width="200" height="360">  | <img src = "Screenshot/Logout.gif" width="200" height="360">
 
-AddTask         |  UpdateTask       |             
-:----------------------------:|:--------------------------------------:|
-<img src = "Screenshot/AddTask.gif" width="200" height="360">  |  <img src = "Screenshot/Update.gif" width="200" height="360">
+AddTask               |           UpdateTask              |     Speech To text          |        
+:----------------------------:|:--------------------------------------:|:--------------------------------------:|
+<img src = "Screenshot/AddTask.gif" width="200" height="360">  |  <img src = "Screenshot/Update.gif" width="200" height="360"> | <img src = "Screenshot/speechtotext.png"  width="200" height="360">
 
 <hr>
 
@@ -183,8 +183,6 @@ Home Page      |                           Login Page                   |  Regis
 ToDoPage       |                                  AddTask                   |  Task           |        Update
 :----------------------------:|:--------------------------------------:|:----------------------:|:-----------------
 <img src = "Screenshot/ToDoList.png" width="200" height="360">  |  <img src = "Screenshot/AddTask.png" width="200" height="360"> | <img src = "Screenshot/Task.png" width="200" height="360">  | <img src = "Screenshot/Update.png" width="200" height="360">
-
-
 
 Profile                |           PriorityHigh               |     About          |        
 :----------------------------:|:--------------------------------------:|:--------------------------------------:|
